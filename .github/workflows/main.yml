@@ -1,0 +1,29 @@
+name: Hexo Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14'
+
+      - name: Setup Hexo
+        run: |
+          npm install hexo-cli -g
+          npm install
+          
+      - name: Deploy
+        run: |
+          hexo clean
+          hexo deploy
