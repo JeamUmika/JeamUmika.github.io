@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>一些Magisk（面具）模块和一些xposed模块以及其他一些需要root的软件 - Jeam</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Jeam"><meta name="msapplication-TileImage" content="/img/favicon-1.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Jeam"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="前言  1. 这里只列举个人现用到的部分模块和软件。  2. 刷机有风险  3. 请不要下载任何第三方提供的模块和软件  Magisk 项目地址：🔗  介绍：这里就不多赘述了，可以说是现在完整root手机的核心软件。“几年前大家都不知道的小软件，现在它的开发者在谷歌上班了，而我还是个‘小混混’”"><meta property="og:type" content="blog"><meta property="og:title" content="一些Magisk（面具）模块和一些xposed模块以及其他一些需要root的软件"><meta property="og:url" content="https://jeam.xyz/posts/c723c08c.html"><meta property="og:site_name" content="Jeam"><meta property="og:description" content="前言  1. 这里只列举个人现用到的部分模块和软件。  2. 刷机有风险  3. 请不要下载任何第三方提供的模块和软件  Magisk 项目地址：🔗  介绍：这里就不多赘述了，可以说是现在完整root手机的核心软件。“几年前大家都不知道的小软件，现在它的开发者在谷歌上班了，而我还是个‘小混混’”"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://raw.githubusercontent.com/jeam-xyz/image/main/_cgi-bin_mmwebwx-bin_webwxgetmsgimg%20%26MsgID%3D8657274480836352132%26skey%3D%40crypt_7d84ec79_e8db61d0619695fad7d2cbbbea345713%26mmweb_appid%3Dwx_webfilehelper.jpg"><meta property="og:image" content="https://raw.githubusercontent.com/jeam-xyz/image/main/_cgi-bin_mmwebwx-bin_webwxgetmsgimg%20%26MsgID%3D8161109403029218376%26skey%3D%40crypt_7d84ec79_e8db61d0619695fad7d2cbbbea345713%26mmweb_appid%3Dwx_webfilehelper.jpg"><meta property="og:image" content="https://raw.githubusercontent.com/jeam-xyz/image/main/_cgi-bin_mmwebwx-bin_webwxgetmsgimg%20%26MsgID%3D1048217388814347669%26skey%3D%40crypt_7d84ec79_e8db61d0619695fad7d2cbbbea345713%26mmweb_appid%3Dwx_webfilehelper.jpg"><meta property="article:published_time" content="2022-02-03T05:02:13.000Z"><meta property="article:modified_time" content="2022-02-03T11:53:27.525Z"><meta property="article:author" content="Jeam"><meta property="article:tag" content="Magisk"><meta property="article:tag" content="xposed"><meta property="article:tag" content="Android"><meta property="article:tag" content="root"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://raw.githubusercontent.com/jeam-xyz/image/main/_cgi-bin_mmwebwx-bin_webwxgetmsgimg%20%26MsgID%3D8657274480836352132%26skey%3D%40crypt_7d84ec79_e8db61d0619695fad7d2cbbbea345713%26mmweb_appid%3Dwx_webfilehelper.jpg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://jeam.xyz/posts/c723c08c.html"},"headline":"一些Magisk（面具）模块和一些xposed模块以及其他一些需要root的软件","image":["https://raw.githubusercontent.com/jeam-xyz/image/main/_cgi-bin_mmwebwx-bin_webwxgetmsgimg%20%26MsgID%3D8657274480836352132%26skey%3D%40crypt_7d84ec79_e8db61d0619695fad7d2cbbbea345713%26mmweb_appid%3Dwx_webfilehelper.jpg","https://raw.githubusercontent.com/jeam-xyz/image/main/_cgi-bin_mmwebwx-bin_webwxgetmsgimg%20%26MsgID%3D8161109403029218376%26skey%3D%40crypt_7d84ec79_e8db61d0619695fad7d2cbbbea345713%26mmweb_appid%3Dwx_webfilehelper.jpg","https://raw.githubusercontent.com/jeam-xyz/image/main/_cgi-bin_mmwebwx-bin_webwxgetmsgimg%20%26MsgID%3D1048217388814347669%26skey%3D%40crypt_7d84ec79_e8db61d0619695fad7d2cbbbea345713%26mmweb_appid%3Dwx_webfilehelper.jpg"],"datePublished":"2022-02-03T05:02:13.000Z","dateModified":"2022-02-03T11:53:27.525Z","author":{"@type":"Person","name":"Jeam"},"publisher":{"@type":"Organization","name":"Jeam","logo":{"@type":"ImageObject","url":"https://jeam.xyz/img/favicon-2.gif"}},"description":"前言  1. 这里只列举个人现用到的部分模块和软件。  2. 刷机有风险  3. 请不要下载任何第三方提供的模块和软件  Magisk 项目地址：🔗  介绍：这里就不多赘述了，可以说是现在完整root手机的核心软件。“几年前大家都不知道的小软件，现在它的开发者在谷歌上班了，而我还是个‘小混混’”"}</script><link rel="canonical" href="https://jeam.xyz/posts/c723c08c.html"><link rel="icon" href="/img/favicon-1.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/androidstudio.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;600&amp;family=Roboto+Mono"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><!--!--><meta name="generator" content="Hexo 6.2.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/favicon-2.gif" alt="Jeam" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/archives">存档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" target="_blank" rel="noopener" href="https://jeam-xyz.herokuapp.com">网盘</a><a class="navbar-item" href="/friends">友链</a><a class="navbar-item" href="/about">关于</a></div><div class="navbar-end"><a class="navbar-item night" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-lightbulb" id="night-icon"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><i class="fa fa-calendar-check fa-fw"></i><span class="level-item"><time dateTime="2022-02-03T11:53:27.525Z" title="2022/2/3 下午7:53:27">2022-02-03</time>更新</span><i class="fa fa-clock fa-fw"></i><span class="level-item">5 分钟读完 (大约780个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">一些Magisk（面具）模块和一些xposed模块以及其他一些需要root的软件</h1><div class="content"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ol>
+<li>这里只列举个人现用到的部分模块和软件。</li>
+<li>刷机有风险</li>
+<li>请不要下载任何第三方提供的模块和软件</li>
+</ol>
+<h2 id="Magisk"><a href="#Magisk" class="headerlink" title="Magisk"></a>Magisk</h2><p>项目地址：<a target="_blank" rel="noopener" href="https://github.com/topjohnwu/Magisk">🔗</a></p>
+<p><strong>介绍：</strong>这里就不多赘述了，可以说是现在完整root手机的核心软件。“几年前大家都不知道的小软件，现在它的开发者在谷歌上班了，而我还是个‘小混混’”</p>
+<p><strong>说明：</strong>开源免费</p>
+<h2 id="Riru"><a href="#Riru" class="headerlink" title="Riru"></a>Riru</h2><p>项目地址：<a target="_blank" rel="noopener" href="https://github.com/RikkaApps/Riru">🔗</a></p>
+<p><strong>介绍：</strong>面具模块。刷LSPosed或Edxposed必备的模块（LSPosed作者现已提供了不需要Riru的LSPosed框架，在最新版的Magisk的设置里面开启Zygisk就行）</p>
+<p><strong>说明：</strong>开源免费</p>
+<h2 id="LSPosed"><a href="#LSPosed" class="headerlink" title="LSPosed"></a>LSPosed</h2><p>项目地址：<a target="_blank" rel="noopener" href="https://github.com/LSPosed/LSPosed">🔗</a></p>
+<p><strong>介绍：</strong>一个替代Edxposed的框架，xposed模块的载体</p>
+<p><strong>说明：</strong>开源免费</p>
+<h1 id="xposed模块"><a href="#xposed模块" class="headerlink" title="xposed模块"></a>xposed模块</h1><h2 id="Thanox"><a href="#Thanox" class="headerlink" title="Thanox"></a>Thanox</h2><p>官网：<a target="_blank" rel="noopener" href="https://tornaco.github.io/Thanox/">🔗</a></p>
+<p><strong>介绍：</strong>一个管理手机权限及其他一些杂项的模块，部分功能配合<a href="https://jeam.xyz/posts/7a780e9a.html#LibChecker">LibChecker</a>和<a target="_blank" rel="noopener" href="https://bbs.letitfly.me/">这个网站</a>使用方便些</p>
+<p><strong>说明：</strong>付费模块</p>
+<p>部分功能展示：</p>
+<p><img src="https://raw.githubusercontent.com/jeam-xyz/image/main/_cgi-bin_mmwebwx-bin_webwxgetmsgimg%20%26MsgID%3D8657274480836352132%26skey%3D%40crypt_7d84ec79_e8db61d0619695fad7d2cbbbea345713%26mmweb_appid%3Dwx_webfilehelper.jpg"></p>
+<h2 id="杜比大喇叭β"><a href="#杜比大喇叭β" class="headerlink" title="杜比大喇叭β"></a>杜比大喇叭β</h2><p>下载：<a href="#LSPosed">LSPosed自带的仓库里有</a></p>
+<p><strong>介绍：</strong>看展示</p>
+<p><strong>说明：</strong>免费模块</p>
+<p>部分功能展示：</p>
+<p><img src="https://raw.githubusercontent.com/jeam-xyz/image/main/_cgi-bin_mmwebwx-bin_webwxgetmsgimg%20%26MsgID%3D8161109403029218376%26skey%3D%40crypt_7d84ec79_e8db61d0619695fad7d2cbbbea345713%26mmweb_appid%3Dwx_webfilehelper.jpg"></p>
+<h2 id="核心破解"><a href="#核心破解" class="headerlink" title="核心破解"></a>核心破解</h2><p>下载：<a href="#LSPosed">LSPosed自带的仓库里有</a></p>
+<p><strong>介绍：</strong>软件降级、签名不一致、签名错误都可以解决</p>
+<p><strong>说明：</strong>免费模块</p>
+<h2 id="解锁MIUI键盘优化"><a href="#解锁MIUI键盘优化" class="headerlink" title="解锁MIUI键盘优化"></a>解锁MIUI键盘优化</h2><p>项目地址：<a target="_blank" rel="noopener" href="https://github.com/Xposed-Modules-Repo/com.xposed.miuiime">🔗</a></p>
+<p><strong>介绍：</strong>MIUI全面屏优化“不支持”其他“第三方”的输入法，此模块能解决这个问题</p>
+<p><strong>说明：</strong>免费模块</p>
+<h2 id="上帝模式"><a href="#上帝模式" class="headerlink" title="上帝模式"></a>上帝模式</h2><p>项目地址：<a target="_blank" rel="noopener" href="https://github.com/kaisar945/Xposed-GodMode">🔗</a></p>
+<p><strong>介绍：</strong>可以移除软件里的小部件</p>
+<p><strong>说明：</strong>免费模块</p>
+<h1 id="Magisk模块"><a href="#Magisk模块" class="headerlink" title="Magisk模块"></a>Magisk模块</h1><h2 id="自动神仙救砖"><a href="#自动神仙救砖" class="headerlink" title="自动神仙救砖"></a>自动神仙救砖</h2><p>下载：<a href="#%E6%90%9E%E6%9C%BA%E5%8A%A9%E6%89%8B">搞机助手</a>里有</p>
+<p><strong>介绍：</strong>看展示</p>
+<p><strong>说明：</strong>免费模块</p>
+<p>展示：</p>
+<p><img src="https://raw.githubusercontent.com/jeam-xyz/image/main/_cgi-bin_mmwebwx-bin_webwxgetmsgimg%20%26MsgID%3D1048217388814347669%26skey%3D%40crypt_7d84ec79_e8db61d0619695fad7d2cbbbea345713%26mmweb_appid%3Dwx_webfilehelper.jpg"></p>
+<h1 id="root软件"><a href="#root软件" class="headerlink" title="root软件"></a>root软件</h1><h2 id="搞机助手"><a href="#搞机助手" class="headerlink" title="搞机助手"></a>搞机助手</h2><p>项目地址：<a target="_blank" rel="noopener" href="https://github.com/liuran001/GJZS">🔗</a></p>
+<p><strong>介绍：</strong>有Magisk仓库、LSPosed仓库、xx专区等等</p>
+<p><strong>说明：</strong>开源软件</p>
+<h2 id="Adguard"><a href="#Adguard" class="headerlink" title="Adguard"></a>Adguard</h2><p>官网：<a target="_blank" rel="noopener" href="https://adguard.com/">🔗</a></p>
+<p><strong>介绍：</strong>一个拦截广告软件，同时开启VPN需要root</p>
+<p><strong>说明：</strong>付费软件</p>
+<h2 id="MyAndroidTools"><a href="#MyAndroidTools" class="headerlink" title="MyAndroidTools"></a>MyAndroidTools</h2><p>官网：<a target="_blank" rel="noopener" href="https://www.myandroidtools.com/">🔗</a></p>
+<p><strong>介绍：</strong>显示应用的组件且可以禁用，配合<a href="https://jeam.xyz/posts/7a780e9a.html#LibChecker">LibChecker</a>和<a target="_blank" rel="noopener" href="https://bbs.letitfly.me/">这个网站</a>使用方便些</p>
+<p><strong>说明：</strong>免费软件</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>一些Magisk（面具）模块和一些xposed模块以及其他一些需要root的软件</p><p><a href="https://jeam.xyz/posts/c723c08c.html">https://jeam.xyz/posts/c723c08c.html</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Jeam</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2022-02-03</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2022-02-03</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="CC BY-NC-SA 4.0" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><i class="icon fab fa-creative-commons"></i><i class="icon fab fa-creative-commons-by"></i><i class="icon fab fa-creative-commons-nc"></i><i class="icon fab fa-creative-commons-sa"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/Magisk/">Magisk</a><a class="link-muted mr-2" rel="tag" href="/tags/xposed/">xposed</a><a class="link-muted mr-2" rel="tag" href="/tags/Android/">Android</a><a class="link-muted mr-2" rel="tag" href="/tags/root/">root</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/posts/4c1a081a.html"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Python笔记（待完成）</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/posts/7a780e9a.html"><span class="level-item">一些手机端实用的软件</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div id="comment-container"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css"><script src="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script><script>var gitalk = new Gitalk({
+            id: "3a2cc869de9e3d2e3040e015c9e73c09",
+            repo: "comment",
+            owner: "jeam-xyz",
+            clientID: "e9c65096c644f1188e5d",
+            clientSecret: "1d858e95f39d171fccc9b7726260a4e22b7da6d8",
+            admin: ["jeam-xyz"],
+            createIssueManually: false,
+            distractionFreeMode: false,
+            perPage: 20,
+            pagerDirection: "last",
+            
+            
+            enableHotKey: true,
+            language: "zh-CN",
+        })
+        gitalk.render('comment-container')</script></div></div></div><!--!--><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen  order-3 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><ul class="menu-list"><li><a class="level is-mobile" href="#前言"><span class="level-left"><span class="level-item">1.1</span><span class="level-item">前言</span></span></a></li><li><a class="level is-mobile" href="#Magisk"><span class="level-left"><span class="level-item">1.2</span><span class="level-item">Magisk</span></span></a></li><li><a class="level is-mobile" href="#Riru"><span class="level-left"><span class="level-item">1.3</span><span class="level-item">Riru</span></span></a></li><li><a class="level is-mobile" href="#LSPosed"><span class="level-left"><span class="level-item">1.4</span><span class="level-item">LSPosed</span></span></a></li></ul><li><a class="level is-mobile" href="#xposed模块"><span class="level-left"><span class="level-item">2</span><span class="level-item">xposed模块</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Thanox"><span class="level-left"><span class="level-item">2.1</span><span class="level-item">Thanox</span></span></a></li><li><a class="level is-mobile" href="#杜比大喇叭β"><span class="level-left"><span class="level-item">2.2</span><span class="level-item">杜比大喇叭β</span></span></a></li><li><a class="level is-mobile" href="#核心破解"><span class="level-left"><span class="level-item">2.3</span><span class="level-item">核心破解</span></span></a></li><li><a class="level is-mobile" href="#解锁MIUI键盘优化"><span class="level-left"><span class="level-item">2.4</span><span class="level-item">解锁MIUI键盘优化</span></span></a></li><li><a class="level is-mobile" href="#上帝模式"><span class="level-left"><span class="level-item">2.5</span><span class="level-item">上帝模式</span></span></a></li></ul></li><li><a class="level is-mobile" href="#Magisk模块"><span class="level-left"><span class="level-item">3</span><span class="level-item">Magisk模块</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#自动神仙救砖"><span class="level-left"><span class="level-item">3.1</span><span class="level-item">自动神仙救砖</span></span></a></li></ul></li><li><a class="level is-mobile" href="#root软件"><span class="level-left"><span class="level-item">4</span><span class="level-item">root软件</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#搞机助手"><span class="level-left"><span class="level-item">4.1</span><span class="level-item">搞机助手</span></span></a></li><li><a class="level is-mobile" href="#Adguard"><span class="level-left"><span class="level-item">4.2</span><span class="level-item">Adguard</span></span></a></li><li><a class="level is-mobile" href="#MyAndroidTools"><span class="level-left"><span class="level-item">4.3</span><span class="level-item">MyAndroidTools</span></span></a></li></ul></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/favicon-2.gif" alt="Jeam" height="28"></a><p class="is-size-7"><span>&copy; 2021 - 2022 <B> Jeam </B> </span><br><a href="mailto:privacy@jeam.xyz">privacy@jeam.xyz</a><br><span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span><script>
+								var now = new Date();
+								function createtime() {
+									var grt= new Date("11/22/2021 08:19:46");//此处修改你的建站时间或者网站上线时间
+									now.setTime(now.getTime()+250);
+									days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+									hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+									if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+									mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+									seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+									snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+									document.getElementById("timeDate").innerHTML = " 本站已运行 "+dnum+" 天 ";
+									document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+								}
+								setInterval("createtime()",250);
+								</script></p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><script src="/js/night.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

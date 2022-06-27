@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="robots" content="noindex"><meta><title>标签: GitHub - Jeam</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Jeam"><meta name="msapplication-TileImage" content="/img/favicon-1.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Jeam"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="Nya~ This is Jeam."><meta property="og:type" content="blog"><meta property="og:title" content="Jeam"><meta property="og:url" content="https://jeam.xyz/"><meta property="og:site_name" content="Jeam"><meta property="og:description" content="Nya~ This is Jeam."><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://jeam.xyz/img/og_image.png"><meta property="article:author" content="Jeam"><meta property="article:tag" content="Jeam"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://jeam.xyz"},"headline":"Jeam","image":["https://jeam.xyz/img/og_image.png"],"author":{"@type":"Person","name":"Jeam"},"publisher":{"@type":"Organization","name":"Jeam","logo":{"@type":"ImageObject","url":"https://jeam.xyz/img/favicon-2.gif"}},"description":"Nya~ This is Jeam."}</script><link rel="icon" href="/img/favicon-1.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/androidstudio.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;600&amp;family=Roboto+Mono"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><!--!--><meta name="generator" content="Hexo 6.2.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/favicon-2.gif" alt="Jeam" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/archives">存档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" target="_blank" rel="noopener" href="https://jeam-xyz.herokuapp.com">网盘</a><a class="navbar-item" href="/friends">友链</a><a class="navbar-item" href="/about">关于</a></div><div class="navbar-end"><a class="navbar-item night" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-lightbulb" id="night-icon"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/tags">标签</a></li><li class="is-active"><a href="#" aria-current="page">GitHub</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><i class="fa fa-calendar-check fa-fw"></i><span class="level-item"><time dateTime="2022-06-27T05:29:21.343Z" title="2022/6/27 下午1:29:21">2022-06-27</time>更新</span><i class="fa fa-clock fa-fw"></i><span class="level-item">几秒读完 (大约105个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/posts/125a04d7.html">errno 10054</a></h1><div class="content">前言
+这里只是对 🔗 进行备份和修改，并非原创
+
+问题
+如图
+
+
+
+解决
+ 1. 对于一个仓库
+
+在博客根目录找到.git这个隐藏文件夹，从里面找到config文件，在最后添加
+
+1
+2
+
+
+[http]
+	sslVerify = false
+
+
+也可以执行
+
+1
+
+
+git config htt</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><i class="fa fa-calendar-check fa-fw"></i><span class="level-item"><time dateTime="2022-01-30T07:05:59.020Z" title="2022/1/30 下午3:05:59">2022-01-30</time>更新</span><i class="fa fa-clock fa-fw"></i><span class="level-item">8 分钟读完 (大约1197个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/posts/761615aa.html">hexo与GitHub Actions的集成布署</a></h1><div class="content">前言
+由于网上的那些关于“hexo与GitHub Actions的集成布署”的文章绝大多数都是布署失败的，少数的是因为不再想试了，所以在这重写一次。（这种布署的缺点和网上那些布署教程失败的主要原因在文章最后的附加提到）
+
+如果没有特别说明，请不要乱修改，如果想改前提是你知道它是干什么用的
+
+前提
+ </div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><i class="fa fa-calendar-check fa-fw"></i><span class="level-item"><time dateTime="2022-05-24T03:26:38.137Z" title="2022/5/24 上午11:26:38">2022-05-24</time>更新</span><i class="fa fa-clock fa-fw"></i><span class="level-item">2 分钟读完 (大约253个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/posts/dd62e41d.html">提供一些学习的便利</a></h1><div class="content">前言
+在GitHub上面搭建的图床可能国内的用户访问不了，这里提供一些便利，仅供学习，使用者所造成的一切后果本站概不负责。
+
+注意：本文章不提何有关使用节点的教程。
+
+ 严禁未成年人和自制力差的人使用，未成年人和自制力差的人请自觉离开。
+
+如果嫌速度慢的话可以尝试下联系我（本站最底部有邮箱地址），也</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><i class="fa fa-calendar-check fa-fw"></i><span class="level-item"><time dateTime="2022-01-10T06:53:13.986Z" title="2022/1/10 下午2:53:13">2022-01-10</time>更新</span><i class="fa fa-clock fa-fw"></i><span class="level-item">2 分钟读完 (大约274个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/posts/4d9ab4ed.html">github图床</a></h1><div class="content">前言
+注意：如果是用GitHub搭建的博客，为了安全不建议把图床跟网站放在同一个号
+
+PicGo与GitHub Token
+在GitHub创建一个新仓库
+
+到GitHub下载PicGo（注意下载位置，等下可能要用）
+
+安装完成后进入PicGo，点击GitHub图床，填仓库名的格式你的账号名字/仓库名</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><i class="fa fa-calendar-check fa-fw"></i><span class="level-item"><time dateTime="2022-06-27T06:19:52.520Z" title="2022/6/27 下午2:19:52">2022-06-27</time>更新</span><i class="fa fa-clock fa-fw"></i><span class="level-item">18 分钟读完 (大约2726个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/posts/338f9b1.html">网站搭建</a></h1><div class="content">前言
+ 1. 为了节约时间成本这里采用一种热门的搭建方法
+ 2. 分为两大类 * 通过网站托管（大部分无后端）（后端可用Qexo来实现）
+     * 用云服务器搭建（有后端）
+    
+    
+ 3. 准备 * 电脑一台（如果用云服务器搭建没电脑也行）（没电脑又不想买服务器的可以看这个 使用Te</div></article></div></div><!--!--><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen  order-3"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/favicon-1.png" alt="Jeam"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Jeam</p><p class="is-size-6 is-block">Nya~</p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">20</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">7</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">23</p></a></div></div></nav></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://jeam.xyz/posts/log.html" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">日志</span></span><span class="level-right"><span class="level-item tag">jeam.xyz</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Web%E7%9B%B8%E5%85%B3/"><span class="level-start"><span class="level-item">Web相关</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="/categories/Windows/"><span class="level-start"><span class="level-item">Windows</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%89%8B%E6%9C%BA%E8%BD%AF%E4%BB%B6/"><span class="level-start"><span class="level-item">手机软件</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%94%B5%E8%84%91%E8%BD%AF%E4%BB%B6/"><span class="level-start"><span class="level-item">电脑软件</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%AC%94%E8%AE%B0/"><span class="level-start"><span class="level-item">笔记</span></span><span class="level-end"><span class="level-item tag">3</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E7%AC%94%E8%AE%B0/%E5%BE%85%E5%AE%8C%E6%88%90/"><span class="level-start"><span class="level-item">待完成</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E9%97%B2%E8%81%8A/"><span class="level-start"><span class="level-item">闲聊</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/06/"><span class="level-start"><span class="level-item">六月 2022</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/05/"><span class="level-start"><span class="level-item">五月 2022</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/02/"><span class="level-start"><span class="level-item">二月 2022</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/01/"><span class="level-start"><span class="level-item">一月 2022</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/12/"><span class="level-start"><span class="level-item">十二月 2021</span></span><span class="level-end"><span class="level-item tag">10</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/11/"><span class="level-start"><span class="level-item">十一月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/favicon-2.gif" alt="Jeam" height="28"></a><p class="is-size-7"><span>&copy; 2021 - 2022 <B> Jeam </B> </span><br><a href="mailto:privacy@jeam.xyz">privacy@jeam.xyz</a><br><span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span><script>
+								var now = new Date();
+								function createtime() {
+									var grt= new Date("11/22/2021 08:19:46");//此处修改你的建站时间或者网站上线时间
+									now.setTime(now.getTime()+250);
+									days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+									hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+									if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+									mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+									seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+									snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+									document.getElementById("timeDate").innerHTML = " 本站已运行 "+dnum+" 天 ";
+									document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+								}
+								setInterval("createtime()",250);
+								</script></p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><script src="/js/night.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
